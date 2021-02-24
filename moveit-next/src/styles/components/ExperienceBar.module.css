@@ -1,0 +1,48 @@
+.experienceBar {
+  display: flex;
+  align-items: center;
+}
+
+.experienceBar span {
+  font-size: 1rem;
+}
+
+.experienceBar>div {
+  /* PARA OCUPAR TODO OP ESPAÇO POSSÍVEL*/
+  flex: 1;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--gray-line);
+  margin: 0 1.5rem;
+  position: relative;
+}
+
+.experienceBar>div>div {
+  height: 4px;
+  border-radius: 4px;
+  background: var(--green);
+}
+
+span.currentExperience {
+  background: var(--blue);
+  color: var(--white);
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 12px;
+  transform: translateX(-50%);
+}
+
+span.currentExperience:after{ /*Triangulo*/
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid var(--blue);
+  top: -6px; 
+  left: 50%;
+  transform: translateX(-50%);
+}
